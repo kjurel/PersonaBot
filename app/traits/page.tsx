@@ -12,97 +12,97 @@ export default function Home() {
       id: "architect",
       name: "Architect",
       description: "INTJ-A / INTJ-T",
-      backgroundImage: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.16personalities.com%2Farticles%2Fproductivity-tips-for-architects-intjs-handling-the-routine&psig=AOvVaw3hMqiJhRoQtC1hVVwB47ym&ust=1693056684227000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKigtuP194ADFQAAAAAdAAAAABAE",
+      backgroundImage: "/Architect.jpeg",
     },
     {
       id: "logician",
       name: "Logician",
       description: "INTP-A / INTP-T",
-      backgroundImage: "URL_TO_LOGICIAN_IMAGE",
+      backgroundImage: "/Logician.png",
     },
     {
       id: "commander",
       name: "Commander",
       description: "ENTJ-A / ENTJ-T",
-      backgroundImage: "URL_TO_COMMANDER_IMAGE",
+      backgroundImage: "/Commander.png",
     },
     {
       id: "debater",
       name: "Debater",
       description: "ENTP-A / ENTP-T",
-      backgroundImage: "URL_TO_DEBATER_IMAGE",
+      backgroundImage: "/Debater.png",
     },
     {
       id: "advocate",
       name: "Advocate",
       description: "INFJ-A / INFJ-T",
-      backgroundImage: "URL_TO_ADVOCATE_IMAGE",
+      backgroundImage: "/Advocate.jpeg",
     },
     {
       id: "mediator",
       name: "Mediator",
       description: "INFP-A / INFP-T",
-      backgroundImage: "URL_TO_MEDIATOR_IMAGE",
+      backgroundImage: "/Mediator.jpeg",
     },
     {
       id: "protagonist",
       name: "Protagonist",
       description: "ENFJ-A / ENFJ-T",
-      backgroundImage: "URL_TO_PROTAGONIST_IMAGE",
+      backgroundImage: "/Protagonists.jpeg",
     },
     {
       id: "campaigner",
       name: "Campaigner",
       description: "ENFP-A / ENFP-T",
-      backgroundImage: "URL_TO_CAMPAIGNER_IMAGE",
+      backgroundImage: "/Campaigner.jpeg",
     },
     {
       id: "logistician",
       name: "Logistician",
       description: "ISTJ-A / ISTJ-T",
-      backgroundImage: "URL_TO_LOGISTICIAN_IMAGE",
+      backgroundImage: "/Lo.jpeg",
     },
     {
       id: "defender",
       name: "Defender",
       description: "ISFJ-A / ISFJ-T",
-      backgroundImage: "URL_TO_DEFENDER_IMAGE",
+      backgroundImage: "/Defender.png",
     },
     {
       id: "executive",
       name: "Executive",
       description: "ESTJ-A / ESTJ-T",
-      backgroundImage: "URL_TO_EXECUTIVE_IMAGE",
+      backgroundImage: "/Executive.png",
     },
     {
       id: "consul",
       name: "Consul",
       description: "ESFJ-A / ESFJ-T",
-      backgroundImage: "URL_TO_CONSUL_IMAGE",
+      backgroundImage: "/Consul.jpeg",
     },
     {
       id: "virtuoso",
       name: "Virtuoso",
       description: "ISTP-A / ISTP-T",
-      backgroundImage: "URL_TO_VIRTUOSO_IMAGE",
+      backgroundImage: "/Virtuoso.jpeg",
     },
     {
       id: "adventurer",
       name: "Adventurer",
       description: "ISFP-A / ISFP-T",
-      backgroundImage: "URL_TO_ADVENTURER_IMAGE",
+      backgroundImage: "/isfp-adventurer.png",
     },
     {
       id: "entrepreneur",
       name: "Entrepreneur",
       description: "ESTP-A / ESTP-T",
-      backgroundImage: "URL_TO_ENTREPRENEUR_IMAGE",
+      backgroundImage: "/Enterprenuer.jpeg",
     },
     {
       id: "entertainer",
       name: "Entertainer",
       description: "ESFP-A / ESFP-T",
-      backgroundImage: "URL_TO_ENTERTAINER_IMAGE",
+      backgroundImage: "/Entertainer.jpeg",
     },
   ];
   
@@ -146,8 +146,8 @@ export default function Home() {
                   id={section.id}
                   style={{
                     backgroundImage: `url(${section.backgroundImage})`,
-                    backgroundSize: "100%",
-                    backgroundPosition: "center",
+                    backgroundSize: "85%",
+                    backgroundPosition: "left top",
                     backgroundRepeat: "no-repeat",
                     display: "flex",
                     flexDirection: "column",
@@ -158,10 +158,10 @@ export default function Home() {
                   }}
                   onClick={() => handleSectionClick(section.description)}
                 >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-black">
                     {section.name}
                   </h5>
-                  <p className="font-normal text-gray-700 dark:text-gray-400">
+                  <p className="font-normal text-gray-700 ">
                     {section.description}
                   </p>
                 </div>
