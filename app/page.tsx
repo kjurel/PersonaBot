@@ -25,7 +25,7 @@ export default function Home() {
       </div>
       <div className="md:bg-gradient-to-r from-blue-500 to-indigo-500 absolute right-0 md:h-full md:w-[50%] h-[50%] w-full bottom-0 bg-gradient-to-b from-blue-500 to-indigo-500">
         <Link
-          href="/traits"
+          href="/temp_traits"
           className="flex flex-col items-center justify-items-center w-full h-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 justify-center"
         >
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

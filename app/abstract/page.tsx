@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Navbar from "../components/navbar";
 
 export default function Home() {
   const navbarHeight = 4;
@@ -21,7 +20,6 @@ export default function Home() {
   };
   return (
     <div>
-      <Navbar />
       <div style={{ height: availableHeight }}>
         <div className="flex inset-x-0 bottom-0">
           <input

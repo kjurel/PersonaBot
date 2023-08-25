@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 
 interface MbtiCardProps {
   id: string;
+  key: string;
   name: string;
   description: string;
   backgroundImage: string;
@@ -18,7 +19,6 @@ const MbtiCard: FC<MbtiCardProps> = (props) => {
   return (
     <>
       <div
-        key={props.id}
         id={props.id}
         style={{
           backgroundImage: `url(${props.backgroundImage})`,
