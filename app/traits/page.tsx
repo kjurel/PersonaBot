@@ -116,7 +116,9 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <div style={{ height: availableHeight }}>
+      <div style={{ height: availableHeight ,
+                margin: "0px 50px 0px",
+        }}>
         {user ? (
           <div className="flex inset-x-0 bottom-0">
             <input
@@ -130,14 +132,14 @@ export default function Home() {
               }}
               className="rounded-l-lg"
             />
-            <button className="bg-green-500 hover:bg-green-600 text-white py-4 px-8 text-center text-lg font-semibold rounded-r-lg w-[15%]">
+            <button className="bg-gray-700 hover:bg-gray-600 text-white py-4 px-8 text-center text-lg font-semibold rounded-r-lg w-[15%]">
               Click me
             </button>
           </div>
         ) : (
                 <div>
                 <div
-                  className="grid grid-cols-4 gap-4"
+                  className="grid grid-cols-4 gap-6"
                   style={{ height: availableHeight }}
                 >
                   {personalitySections.map((section) => (
@@ -158,11 +160,12 @@ export default function Home() {
                         position: "relative", // Add position to control text overflow
                       }}
                       onClick={() => handleSectionClick(section.description)}
+                      className="opacity-80 hover:opacity-100 hover:scale-105 group-hover:opacity-40 transition-opacity transition-scale rounded-lg"
                     >
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-black">
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-black bg-white px-2">
                         {section.name}
                       </h5>
-                      <p className="font-normal text-gray-700">
+                      <p className="font-normal text-gray-700 bg-white x-2 ">
                         {section.description}
                       </p>
                     </div>
