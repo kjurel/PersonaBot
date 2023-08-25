@@ -31,22 +31,38 @@ export default function Home() {
         ) : (
           <div>
             <div className="grid grid-cols-4 gap-4" style={{ height: availableHeight }}>
-              <div>01</div>
-              <div>02</div>
-              <div>03</div>
-              <div>04</div>
-              <div>05</div>
-              <div>06</div>
-              <div>07</div>
-              <div>08</div>
-              <div>09</div>
-              <div>10</div>
-              <div>11</div>
-              <div>12</div>
-              <div>13</div>
-              <div>14</div>
-              <div>15</div>
-              <div>16</div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
+              <div><h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Personality Traits</h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">MBTI Personality Types </p></div>
             </div>
           </div>
         )}
