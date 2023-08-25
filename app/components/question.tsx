@@ -1,34 +1,52 @@
+"use client";
 import React, { FC, useRef } from "react";
+import { useStore } from "@nanostores/react";
+import { $abstts, $anstts, $pidtts } from "./stats";
 
 interface QuestionProps {}
 
 const Question: FC<QuestionProps> = (props) => {
   let qestt = useRef<HTMLInputElement>(null);
-  const freezeAbstract = () => {
-    abstt.current!.disabled = true;
-  };
-  const unlockFreeze = () => {
-    abstt.current!.disabled = false;
-  };
+  const abstts = useStore($abstts);
   return (
     <>
       <input ref={qestt} type="text" />
       <button
         onClick={() => {
-          abstt.current!.disabled = true;
+          if (abstts === "") {
+            // normal question
+            fetch(
+              "/api?" +
+                new URLSearchParams({
+                  prompt: qestt.current!.value,
+                }).toString(),
+            )
+              .then((res) => res.json())
+              .then((txt) => $anstts.set(txt));
+          } else {
+            // question with abstract
+            fetch("/api/abstract", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                abstract: abstts,
+                question: qestt.current!.value,
+              }),
+            })
+              .then((res) => res.json())
+              .then(({ answer, parentId }) => {
+                $anstts.set(answer);
+                $pidtts.set(parentId);
+              });
+          }
         }}
       >
-        Freeze
-      </button>
-      <button
-        onClick={() => {
-          abstt.current!.disabled = false;
-        }}
-      >
-        Unfreeze
+        Answer
       </button>
     </>
   );
 };
 
-export default Abstract;
+export default Question;

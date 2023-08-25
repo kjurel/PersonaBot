@@ -1,21 +1,23 @@
-import React, { FC, useRef } from "react";
+"use client";
+import React, { FC, useEffect, useRef } from "react";
+import { useStore } from "@nanostores/react";
+import { $abstts } from "./stats";
 
 interface AbstractProps {}
 
 const Abstract: FC<AbstractProps> = (props) => {
   let abstt = useRef<HTMLInputElement>(null);
-  const freezeAbstract = () => {
-    abstt.current!.disabled = true;
-  };
-  const unlockFreeze = () => {
-    abstt.current!.disabled = false;
-  };
+  const abstts = useStore($abstts);
+  useEffect(() => {
+    abstt.current!.value = abstts;
+  }, [abstts]);
   return (
     <>
       <input ref={abstt} type="text" />
       <button
         onClick={() => {
           abstt.current!.disabled = true;
+          $abstts.set(abstt.current!.value);
         }}
       >
         Freeze
@@ -23,6 +25,7 @@ const Abstract: FC<AbstractProps> = (props) => {
       <button
         onClick={() => {
           abstt.current!.disabled = false;
+          $abstts.set("");
         }}
       >
         Unfreeze
