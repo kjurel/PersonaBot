@@ -9,8 +9,8 @@ const TempPage: FC<TempPageProps> = (props) => {
   return (
     <>
       <Abstract />
-      <Answer />
       <Question />
+      <Answer />
     </>
   );
 };

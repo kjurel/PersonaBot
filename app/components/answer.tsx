@@ -10,7 +10,7 @@ const Answer: FC<AnswerProps> = (props) => {
   const anstts = useStore($anstts);
   return (
     <>
-      <p>{anstts}</p>
+      <p className="text-whitesmoke">{anstts}</p>
     </>
   );
 };
