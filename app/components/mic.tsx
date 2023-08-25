@@ -72,6 +72,7 @@ const Mic: FC<MicProps> = (props) => {
     a.style = "display: none";
     // @ts-ignore
     return function (blob, fileName: string) {
+      console.log(blob);
       var url = window.URL.createObjectURL(blob);
       a.href = url;
       a.download = fileName;

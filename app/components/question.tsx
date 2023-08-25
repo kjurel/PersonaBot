@@ -1,7 +1,7 @@
 "use client";
 import React, { FC, useRef } from "react";
 import { useStore } from "@nanostores/react";
-import { $abstts, $anstts, $pidtts } from "./stats";
+import { $abstts, $anstts, $pidtts, $usrtts } from "./stats";
 
 interface QuestionProps {}
 
@@ -23,14 +23,32 @@ const Question: FC<QuestionProps> = (props) => {
           onClick={() => {
             if (abstts === "") {
               // normal question
-              fetch(
-                "/api?" +
-                  new URLSearchParams({
-                    prompt: qestt.current!.value,
-                  }).toString(),
-              )
-                .then((res) => res.json())
-                .then((txt) => $anstts.set(txt.answer));
+              if ($usrtts.get() != null) {
+                fetch("/api/mbti", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify({
+                    type: $usrtts.get(),
+                    question: qestt,
+                  }),
+                })
+                  .then((res) => res.json())
+                  .then(({ answer, parentId }) => {
+                    $anstts.set(answer);
+                    $pidtts.set(parentId);
+                  });
+              } else {
+                fetch(
+                  "/api?" +
+                    new URLSearchParams({
+                      prompt: qestt.current!.value,
+                    }).toString(),
+                )
+                  .then((res) => res.json())
+                  .then((txt) => $anstts.set(txt.answer));
+              }
             } else {
               // question with abstract
               fetch("/api/abstract", {
