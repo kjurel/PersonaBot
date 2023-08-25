@@ -10,7 +10,17 @@ const Answer: FC<AnswerProps> = (props) => {
   const anstts = useStore($anstts);
   return (
     <>
-      <p className="text-whitesmoke">{anstts}</p>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          flexGrow: 1,
+          border: "1px solid white",
+        }}
+        className="rounded-lg"
+      >
+        <p className="text-whitesmoke">{anstts}</p>
+      </div>
     </>
   );
 };

@@ -23,11 +23,6 @@ const Navbar = () => {
         </Link>
         <ul className="flex space-x-4">
           <li>
-            <Link href="/abstract" className="text-white hover:text-blue-500">
-              Abstract
-            </Link>
-          </li>
-          <li>
             <Link
               ref={trait_lnk}
               href="/temp_traits"

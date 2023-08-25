@@ -33,8 +33,10 @@ export default function Home() {
       <p className="xl:text-[5rem] text-[4rem] font-mono">
         Analysis
         </p>
-      <Abstract />
+      <Abstract/>
+      <div className="mb-2">
       <Question />
+      </div>
       <Answer />
       </div>
     </div>
