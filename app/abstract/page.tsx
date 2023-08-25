@@ -15,10 +15,11 @@ export default function Home() {
                 padding: '12px 20px',
                 margin: '0',
                 boxSizing: 'border-box',
+                color:"black"
               }}
               className="rounded-l-lg"
             />
-            <button className="bg-green-500 hover:bg-green-600 text-white py-4 px-8 text-center text-lg font-semibold rounded-r-lg w-[15%]">
+            <button className="bg-gray-700 hover:bg-gray-600 text-white py-4 px-8 text-center text-lg font-semibold rounded-r-lg w-[15%]">
               Click me
             </button>
           </div>
