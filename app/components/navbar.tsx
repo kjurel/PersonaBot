@@ -5,10 +5,12 @@ const Navbar = () => {
   return (
     <div className='w-full bg-gradient-to-r from-black to-grey-800 font-mono'>
       <nav className='flex items-center justify-between h-16 px-4'>
+      <Link href='/' className='text-white hover:text-blue-500'>
         <div className='text-white text-xl font-bold select-none'>PersonaBot<span className='text-2xl'>
           🔬
           </span>
           </div>
+          </Link>
         <ul className='flex space-x-4'>
           <li>
             <Link href='/abstract' className='text-white hover:text-blue-500'>
