@@ -10,7 +10,7 @@ const Question: FC<QuestionProps> = (props) => {
   const abstts = useStore($abstts);
   return (
     <>
-      <input ref={qestt} type="text" />
+      <input ref={qestt} type="text" className="text-black"/>
       <button
         onClick={() => {
           if (abstts === "") {
