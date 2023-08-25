@@ -1,7 +1,10 @@
 import Navbar from './components/navbar'
-
+import Homepage from './homepage'
 export default function Home() {
   return (
-    <Navbar></Navbar>
+    <div>
+    <Navbar/>
+    <Homepage/>
+    </div>
   )
 }
