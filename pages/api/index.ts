@@ -1,14 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { ChatGPTAPI } from "chatgpt";
-
-async function wrapper(prompt: string, parentId?: string) {
-  const api = new ChatGPTAPI({
-    apiKey: process.env.OPEN_API_KEY!,
-  });
-
-  const res = await api.sendMessage(prompt, { parentMessageId: parentId });
-  return res;
-}
+import { wrapper } from "./_wrapper";
 
 export default async (request: NextApiRequest, response: NextApiResponse) => {
   const {
@@ -16,7 +7,7 @@ export default async (request: NextApiRequest, response: NextApiResponse) => {
     method,
   } = request;
 
-  if (!prompt) return response.status(404).send("`promt` is required.");
+  if (!prompt) return response.status(404).send("`prompt` is required.");
   else if (Array.isArray(prompt) || Array.isArray(parentId))
     return response
       .status(400)
