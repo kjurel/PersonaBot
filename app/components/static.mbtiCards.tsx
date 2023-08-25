@@ -1,4 +1,10 @@
-import React, { FC, useState } from "react";
+"use client";
+import { useStore } from "@nanostores/react";
+import React, { FC, useEffect, useState } from "react";
+import { $usrtts } from "./stats";
+import { useRouter } from "next/navigation";
+import Router from "next/router";
+import Link from "next/link";
 
 interface MbtiCardProps {
   id: string;
@@ -9,16 +15,19 @@ interface MbtiCardProps {
 }
 
 const MbtiCard: FC<MbtiCardProps> = (props) => {
-  const [user, setUser] = useState("");
+  const usrtts = useStore($usrtts);
   const handleSectionClick = (description: string | any[]) => {
     if (typeof description === "string") {
       const shortenedDescription = description.slice(0, 4);
-      setUser(shortenedDescription);
+      console.log(shortenedDescription);
+      $usrtts.set(shortenedDescription);
+      // Router.push("/");
     }
   };
   return (
     <>
-      <div
+      <Link
+        href={"/"}
         id={props.id}
         style={{
           backgroundImage: `url(${props.backgroundImage})`,
@@ -42,7 +51,7 @@ const MbtiCard: FC<MbtiCardProps> = (props) => {
         <p className="font-normal text-gray-700 bg-white x-2 ">
           {props.description}
         </p>
-      </div>
+      </Link>
     </>
   );
 };

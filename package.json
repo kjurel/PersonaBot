@@ -18,6 +18,7 @@
     "chatgpt": "^5.2.5",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
+    "mic-recorder-to-mp3": "^2.2.2",
     "nanostores": "^0.9.3",
     "next": "13.4.19",
     "postcss": "8.4.28",
@@ -33,7 +34,7 @@
     "prettier-plugin-tailwindcss": "^0.5.3"
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,ts,tsx,json}": [
       "prettier --write",
       "eslint --fix",
       "git add"

@@ -3,9 +3,22 @@ import React, { FC } from "react";
 import Data from "../data/mbti.img.json";
 import MbtiCard from "../components/static.mbtiCards";
 
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { $usrtts } from "../components/stats";
+
 const MbtiCards: FC<{}> = (props) => {
   const navbarHeight = 4;
   const availableHeight = `calc(100vh - ${navbarHeight}rem)`;
+  // $usrtts.subscribe((val) => {
+  //   if (val) {
+  //     console.log("changin");
+  //     const { push } = useRouter();
+  //     useEffect(() => {
+  //       push("/");
+  //     }, []);
+  //   }
+  // });
   return (
     <>
       <div style={{ height: availableHeight, margin: "0px 50px 0px" }}>

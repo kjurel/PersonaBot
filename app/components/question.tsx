@@ -29,7 +29,7 @@ const Question: FC<QuestionProps> = (props) => {
                 }).toString()
             )
               .then((res) => res.json())
-              .then((txt) => $anstts.set(txt));
+              .then((txt) => $anstts.set(txt.answer));
           } else {
             // question with abstract
             fetch("/api/abstract", {
