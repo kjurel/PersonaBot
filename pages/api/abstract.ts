@@ -5,7 +5,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== "POST")
     return res.status(405).send({ message: "Only POST requests allowed" });
 
-  const body = JSON.parse(req.body);
+  const body = req.body;
 
   const { abstract, question, parentId } = body;
 
