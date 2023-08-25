@@ -1,8 +1,14 @@
+"use client"
+import { useState } from 'react';
 import Navbar from '../components/navbar'
 
 export default function Home() {
   const navbarHeight = 4;
   const availableHeight = `calc(100vh - ${navbarHeight}rem)`;
+  const [text, setText] = useState("");
+  const handle = () =>{
+  console.log(text);
+  }
   return (
       <div>
         <Navbar/>
@@ -18,8 +24,12 @@ export default function Home() {
                 color:"black"
               }}
               className="rounded-l-lg"
+              id='inputted'
+              placeholder='Type a message'
+              onChange={e=>setText(e.target.value)}
+              value={text}
             />
-            <button className="bg-gray-700 hover:bg-gray-600 text-white py-4 px-8 text-center text-lg font-semibold rounded-r-lg w-[15%]">
+            <button className="bg-gray-700 hover:bg-gray-600 text-white py-4 px-8 text-center text-lg font-semibold rounded-r-lg w-[15%]" onClick={handle}>
               Click me
             </button>
           </div>
