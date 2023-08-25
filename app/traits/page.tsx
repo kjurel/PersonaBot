@@ -135,39 +135,40 @@ export default function Home() {
             </button>
           </div>
         ) : (
-          <div>
-            <div
-              className="grid grid-cols-4 gap-4"
-              style={{ height: availableHeight }}
-            >
-              {personalitySections.map((section) => (
+                <div>
                 <div
-                  key={section.id}
-                  id={section.id}
-                  style={{
-                    backgroundImage: `url(${section.backgroundImage})`,
-                    backgroundSize: "85%",
-                    backgroundPosition: "left top",
-                    backgroundRepeat: "no-repeat",
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    padding: "20px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => handleSectionClick(section.description)}
+                  className="grid grid-cols-4 gap-4"
+                  style={{ height: availableHeight }}
                 >
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-black">
-                    {section.name}
-                  </h5>
-                  <p className="font-normal text-gray-700 ">
-                    {section.description}
-                  </p>
+                  {personalitySections.map((section) => (
+                    <div
+                      key={section.id}
+                      id={section.id}
+                      style={{
+                        backgroundImage: `url(${section.backgroundImage})`,
+                        backgroundSize: "cover", // Use 'cover' to maintain aspect ratio
+                        backgroundPosition: "center top", // Center the background image
+                        backgroundRepeat: "no-repeat",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between", // Adjust alignment for better spacing
+                        alignItems: "center", // Center text horizontally
+                        padding: "20px",
+                        cursor: "pointer",
+                        position: "relative", // Add position to control text overflow
+                      }}
+                      onClick={() => handleSectionClick(section.description)}
+                    >
+                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-black">
+                        {section.name}
+                      </h5>
+                      <p className="font-normal text-gray-700">
+                        {section.description}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>              
         )}
       </div>
     </div>
