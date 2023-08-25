@@ -70,7 +70,7 @@ const Mic: FC<MicProps> = (props) => {
   const saveBlob = (function () {
     var a = document.createElement("a");
     document.body.appendChild(a);
-    a.style = "display: none";
+    // a.style = "display: none";
     // @ts-ignore
     return function (blob, fileName: string) {
       console.log(blob);
