@@ -16,6 +16,8 @@ const Answer: FC<AnswerProps> = (props) => {
           flexDirection: "column",
           flexGrow: 1,
           border: "1px solid white",
+          padding:"1%",
+          marginBottom: "15px"
         }}
         className="rounded-lg"
       >
