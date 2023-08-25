@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import React, { useState } from "react";
-import Navbar from "../components/navbar";
+// import Navbar from "../components/navbar";
 
 export default function Home() {
   const navbarHeight = 4;
@@ -105,9 +105,9 @@ export default function Home() {
       backgroundImage: "/Entertainer.jpeg",
     },
   ];
-  
+
   const handleSectionClick = (description: string | any[]) => {
-    if (typeof description === 'string') {
+    if (typeof description === "string") {
       const shortenedDescription = description.slice(0, 4);
       setUser(shortenedDescription);
       console.log(user);
@@ -115,20 +115,17 @@ export default function Home() {
   };
   return (
     <div>
-      <Navbar />
-      <div style={{ height: availableHeight ,
-                margin: "0px 50px 0px",
-        }}>
+      <div style={{ height: availableHeight, margin: "0px 50px 0px" }}>
         {user ? (
           <div className="flex inset-x-0 bottom-0">
             <input
               type="text"
               style={{
-                width: '85%',
-                padding: '12px 20px',
-                margin: '0',
-                boxSizing: 'border-box',
-                color:'black',
+                width: "85%",
+                padding: "12px 20px",
+                margin: "0",
+                boxSizing: "border-box",
+                color: "black",
               }}
               className="rounded-l-lg"
             />
@@ -137,41 +134,41 @@ export default function Home() {
             </button>
           </div>
         ) : (
-                <div>
+          <div>
+            <div
+              className="grid grid-cols-4 gap-6"
+              style={{ height: availableHeight }}
+            >
+              {personalitySections.map((section) => (
                 <div
-                  className="grid grid-cols-4 gap-6"
-                  style={{ height: availableHeight }}
+                  key={section.id}
+                  id={section.id}
+                  style={{
+                    backgroundImage: `url(${section.backgroundImage})`,
+                    backgroundSize: "cover", // Use 'cover' to maintain aspect ratio
+                    backgroundPosition: "center top", // Center the background image
+                    backgroundRepeat: "no-repeat",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between", // Adjust alignment for better spacing
+                    alignItems: "center", // Center text horizontally
+                    padding: "20px",
+                    cursor: "pointer",
+                    position: "relative", // Add position to control text overflow
+                  }}
+                  onClick={() => handleSectionClick(section.description)}
+                  className="opacity-80 hover:opacity-100 hover:scale-105 group-hover:opacity-40 transition-opacity transition-scale rounded-lg"
                 >
-                  {personalitySections.map((section) => (
-                    <div
-                      key={section.id}
-                      id={section.id}
-                      style={{
-                        backgroundImage: `url(${section.backgroundImage})`,
-                        backgroundSize: "cover", // Use 'cover' to maintain aspect ratio
-                        backgroundPosition: "center top", // Center the background image
-                        backgroundRepeat: "no-repeat",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between", // Adjust alignment for better spacing
-                        alignItems: "center", // Center text horizontally
-                        padding: "20px",
-                        cursor: "pointer",
-                        position: "relative", // Add position to control text overflow
-                      }}
-                      onClick={() => handleSectionClick(section.description)}
-                      className="opacity-80 hover:opacity-100 hover:scale-105 group-hover:opacity-40 transition-opacity transition-scale rounded-lg"
-                    >
-                      <h5 className="mb-2 text-2xl font-bold tracking-tight text-black bg-white px-2">
-                        {section.name}
-                      </h5>
-                      <p className="font-normal text-gray-700 bg-white x-2 ">
-                        {section.description}
-                      </p>
-                    </div>
-                  ))}
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-black bg-white px-2">
+                    {section.name}
+                  </h5>
+                  <p className="font-normal text-gray-700 bg-white x-2 ">
+                    {section.description}
+                  </p>
                 </div>
-              </div>              
+              ))}
+            </div>
+          </div>
         )}
       </div>
     </div>

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "architect",
+    "name": "Architect",
+    "description": "INTJ-A / INTJ-T",
+    "backgroundImage": "/Architect.jpeg"
+  },
+  {
+    "id": "logician",
+    "name": "Logician",
+    "description": "INTP-A / INTP-T",
+    "backgroundImage": "/Logician.png"
+  },
+  {
+    "id": "commander",
+    "name": "Commander",
+    "description": "ENTJ-A / ENTJ-T",
+    "backgroundImage": "/Commander.png"
+  },
+  {
+    "id": "debater",
+    "name": "Debater",
+    "description": "ENTP-A / ENTP-T",
+    "backgroundImage": "/Debater.png"
+  },
+  {
+    "id": "advocate",
+    "name": "Advocate",
+    "description": "INFJ-A / INFJ-T",
+    "backgroundImage": "/Advocate.jpeg"
+  },
+  {
+    "id": "mediator",
+    "name": "Mediator",
+    "description": "INFP-A / INFP-T",
+    "backgroundImage": "/Mediator.jpeg"
+  },
+  {
+    "id": "protagonist",
+    "name": "Protagonist",
+    "description": "ENFJ-A / ENFJ-T",
+    "backgroundImage": "/Protagonists.jpeg"
+  },
+  {
+    "id": "campaigner",
+    "name": "Campaigner",
+    "description": "ENFP-A / ENFP-T",
+    "backgroundImage": "/Campaigner.jpeg"
+  },
+  {
+    "id": "logistician",
+    "name": "Logistician",
+    "description": "ISTJ-A / ISTJ-T",
+    "backgroundImage": "/Lo.jpeg"
+  },
+  {
+    "id": "defender",
+    "name": "Defender",
+    "description": "ISFJ-A / ISFJ-T",
+    "backgroundImage": "/Defender.png"
+  },
+  {
+    "id": "executive",
+    "name": "Executive",
+    "description": "ESTJ-A / ESTJ-T",
+    "backgroundImage": "/Executive.png"
+  },
+  {
+    "id": "consul",
+    "name": "Consul",
+    "description": "ESFJ-A / ESFJ-T",
+    "backgroundImage": "/Consul.jpeg"
+  },
+  {
+    "id": "virtuoso",
+    "name": "Virtuoso",
+    "description": "ISTP-A / ISTP-T",
+    "backgroundImage": "/Virtuoso.jpeg"
+  },
+  {
+    "id": "adventurer",
+    "name": "Adventurer",
+    "description": "ISFP-A / ISFP-T",
+    "backgroundImage": "/isfp-adventurer.png"
+  },
+  {
+    "id": "entrepreneur",
+    "name": "Entrepreneur",
+    "description": "ESTP-A / ESTP-T",
+    "backgroundImage": "/Enterprenuer.jpeg"
+  },
+  {
+    "id": "entertainer",
+    "name": "Entertainer",
+    "description": "ESFP-A / ESFP-T",
+    "backgroundImage": "/Entertainer.jpeg"
+  }
+]
