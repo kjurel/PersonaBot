@@ -12,9 +12,8 @@ const Question: FC<QuestionProps> = (props) => {
     <>
       <div className="relative flex h-10 w-full min-w-[200px] ">
         <input
-          ref={qestt}
-          type="text"
-          className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-blue-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50 rounded-full"
+          ref={qestt} type="text"
+          className="peer h-full w-full rounded-[7px] border border-blue-gray-200 border-t-transparent bg-transparent px-3 py-2.5 pr-20 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-gray-800 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-white focus:border-t-white focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
           placeholder=""
           required
         />
@@ -23,32 +22,14 @@ const Question: FC<QuestionProps> = (props) => {
           onClick={() => {
             if (abstts === "") {
               // normal question
-              if ($usrtts.get() != null) {
-                fetch("/api/mbti", {
-                  method: "POST",
-                  headers: {
-                    "Content-Type": "application/json",
-                  },
-                  body: JSON.stringify({
-                    type: $usrtts.get(),
-                    question: qestt,
-                  }),
-                })
-                  .then((res) => res.json())
-                  .then(({ answer, parentId }) => {
-                    $anstts.set(answer);
-                    $pidtts.set(parentId);
-                  });
-              } else {
-                fetch(
-                  "/api?" +
-                    new URLSearchParams({
-                      prompt: qestt.current!.value,
-                    }).toString(),
-                )
-                  .then((res) => res.json())
-                  .then((txt) => $anstts.set(txt.answer));
-              }
+              fetch(
+                "/api?" +
+                  new URLSearchParams({
+                    prompt: qestt.current!.value,
+                  }).toString(),
+              )
+                .then((res) => res.json())
+                .then((txt) => $anstts.set(txt.answer));
             } else {
               // question with abstract
               fetch("/api/abstract", {
@@ -75,6 +56,8 @@ const Question: FC<QuestionProps> = (props) => {
           Ask me anything!
         </label>
       </div>
+
+
     </>
   );
 };
