@@ -1,10 +1,11 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import Navbar from "../components/navbar";
 
 export default function Home() {
   const navbarHeight = 4;
   const availableHeight = `calc(100vh - ${navbarHeight}rem)`;
-  const user = null; // You can replace null with an actual user object
+  const [user, setUser] = useState("");
 
   const personalitySections = [
     {
@@ -105,7 +106,13 @@ export default function Home() {
     },
   ];
   
-
+  const handleSectionClick = (description: string | any[]) => {
+    if (typeof description === 'string') {
+      const shortenedDescription = description.slice(0, 4);
+      setUser(shortenedDescription);
+      console.log(user);
+    }
+  };
   return (
     <div>
       <Navbar />
@@ -119,6 +126,7 @@ export default function Home() {
                 padding: '12px 20px',
                 margin: '0',
                 boxSizing: 'border-box',
+                color:'black',
               }}
               className="rounded-l-lg"
             />
@@ -146,7 +154,9 @@ export default function Home() {
                     justifyContent: "center",
                     alignItems: "center",
                     padding: "20px",
+                    cursor: "pointer",
                   }}
+                  onClick={() => handleSectionClick(section.description)}
                 >
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white ">
                     {section.name}
