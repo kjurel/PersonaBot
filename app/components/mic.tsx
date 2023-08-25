@@ -1,6 +1,7 @@
 "use client";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { useStore } from "@nanostores/react";
+// @ts-ignore
 import MicRecorder from "mic-recorder-to-mp3";
 import { $anstts, $qestts } from "./stats";
 
