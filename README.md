@@ -10,9 +10,15 @@ Powered by
 + OpenAI API
 
 ## Features of BOT:
+
 => Adapts seamlessly to diverse MTBI personality types, ensuring conversations are engaging, relatable, and tailor-made.
+
 => Multi-Personality Switch
+
 => Engagement Boost
+
 => Future-Ready
 
-Join us in reshaping the future of AI-driven interactions. #HackCOG #AIInnovation #ConversationalAI
+Join us in reshaping the future of AI-driven interactions. 
+
+#HackCOG #AIInnovation #ConversationalAI
