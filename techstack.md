@@ -44,7 +44,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [kjurel/PersonaBot](https://github.com/kjurel/PersonaBot)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|21<br/>Tools used|12/02/23 <br/>Report generated|
+|23<br/>Tools used|01/05/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -197,15 +197,17 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (5)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (7)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (5)
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (7)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
 |[@types/node](https://www.npmjs.com/@types/node)|v20.5.6|08/25/23|tokcide |MIT|N/A|
 |[@types/react](https://www.npmjs.com/@types/react)|v18.2.21|08/25/23|tokcide |MIT|N/A|
 |[@types/react-dom](https://www.npmjs.com/@types/react-dom)|v18.2.7|08/25/23|tokcide |MIT|N/A|
+|[husky](https://www.npmjs.com/husky)|v8.0.3|08/25/23|tokcide |MIT|N/A|
+|[lint-staged](https://www.npmjs.com/lint-staged)|v14.0.1|08/25/23|tokcide |MIT|N/A|
 |[react-dom](https://www.npmjs.com/react-dom)|v18.2.0|08/25/23|tokcide |MIT|N/A|
 |[tailwindcss](https://www.npmjs.com/tailwindcss)|v3.3.3|08/25/23|tokcide |MIT|N/A|
 
